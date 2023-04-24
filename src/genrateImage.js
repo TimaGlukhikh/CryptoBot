@@ -57,41 +57,12 @@ const currency = {
 
   const currentGraphic = availableGraphics[graphics];
   const image = await loadImage(currentGraphic.image);
-  context.drawImage(image, ...currentGraphic.options) //currentGraphic.nameOfgr)
+  context.drawImage(image, ...currentGraphic.options)
   
-
-                                   ////////////////
-
-  //const graphic_neutral = await loadImage('/Users/timagl/Downloads/CryptoBotGrapichs/assets/graphicneutral.svg');
-  //context.drawImage(graphic_neutral, 260, 500, 1400, 600)
-
-  //const graphic_sell = await loadImage('/Users/timagl/Downloads/CryptoBotGrapichs/assets/graphicsell.svg');
-  //context.drawImage(graphic_sell, 260, 500, 1400, 600)
-
-  //const graphic_buy = await loadImage('/Users/timagl/Downloads/CryptoBotGrapichs/assets/graphicbuy.svg');
-  //context.drawImage(graphic_buy, 260, 500, 1400, 600)
-
   context.font = '150px "SpaceGrotesk-SemiBold"'
   context.fillStyle = '#F3CC30'
   context.fillText(currency, 180, 280)
   
-                                    /////////////////
-
-
-  // const price_btc = "20,337$";
-  // context.font = '150px "SpaceGrotesk-SemiBold"'
-  // context.fillStyle = '#FFFFFF'
-  // context.fillText(price_btc, 1160, 320)
-
-  
-  
-
-  
-  // context.font = '70px "SpaceGrotesk-Bold"'
-  // context.fillStyle = '#FFFFFF'
-  // context.fillText('current price:', 1250, 150)
-  
-
   const imgBuffer = canvas.toBuffer('image/png');
   fs.writeFileSync('./results/drawnImage.png', imgBuffer)
 
