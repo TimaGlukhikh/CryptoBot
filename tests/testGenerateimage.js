@@ -1,6 +1,3 @@
-const generateImage = require('../src/genrateImage.js')
-generateImage(currency, graphics)
+const generateImage = require("../src/generateImage.js");
 
-
-
-
+generateImage(currency, graphics);
