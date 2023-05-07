@@ -2,9 +2,12 @@
   "root": true,
   "extends": [
     "airbnb",
-    "prettier"
-      ],
-    "plugins": [
+    "prettier",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
     "prettier"
   ],
   "rules": {
