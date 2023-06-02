@@ -55,7 +55,7 @@ app.post(
 );
 
 app.post(
-	"/generate-image",
+	"/generate-signal",
 	body("currency").notEmpty().isString(),
 	body("mode").notEmpty().isIn(Object.keys(images.graphics)),
 	async (req, res) => {
@@ -66,7 +66,7 @@ app.post(
 			});
 		}
 
-		const path = await new SignalGenerator("BTC", "buy").saveToS3();
+		const path = await new SignalGenerator(req.body.currency, req.body.mode).saveToS3();
 		const client = new S3Client({ credentials: config.aws.credentials, region: config.aws.region });
 		const command = new GetObjectCommand({
 			Bucket: config.aws.bucket,
