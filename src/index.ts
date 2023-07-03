@@ -19,9 +19,9 @@ app.use(express.urlencoded());
 app.post(
 	"/generate-forecast",
 	body("currency").notEmpty().isString(),
-	body("forecast").notEmpty().isInt(),
-	body("forecastUpper").notEmpty().isInt(),
-	body("forecastLower").notEmpty().isInt(),
+	body("forecast").notEmpty().isFloat(),
+	body("forecastUpper").notEmpty().isFloat(),
+	body("forecastLower").notEmpty().isFloat(),
 	body("forecastDate").notEmpty().isDate(),
 	async (req, res) => {
 		if (!validationResult(req).isEmpty()) {
