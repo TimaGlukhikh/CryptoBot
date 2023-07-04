@@ -16,4 +16,5 @@ RUN apk add --no-cache \
 
 COPY package.json ./
 RUN npm install --prod
+RUN npm run compile
 COPY . ./
