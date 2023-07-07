@@ -12,9 +12,10 @@ RUN apk add --no-cache \
         pango-dev \
         cairo-dev \
         giflib-dev \
+        librsvg-dev \
         python3
 
 COPY package.json ./
-RUN npm install --prod
+RUN npm install --prod --build-from-source
 COPY . ./
 RUN npm run compile
