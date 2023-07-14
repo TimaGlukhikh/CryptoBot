@@ -1,8 +1,5 @@
 /node_modules
 /.DS_Store
-results/*.*
 package-lock.json
 .env
-*.js
-*.js.*
 .idea
